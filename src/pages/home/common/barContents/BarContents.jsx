@@ -1,15 +1,16 @@
 import { useContext } from "react";
 import { ConversationContext } from "../../../../provider/ConversationProvider";
+import MyChats from "./MyChats";
 
 
 const BarContents = () => {
     const {activeBarContent} = useContext(ConversationContext);
 
     return (
-        <div className="w-[380px] h-screen bg-green-500">
+        <div className="w-[380px] h-screen bg-[#F5F7FB]">
             {
                 activeBarContent === "chats" &&
-                <div>chats</div>
+                <MyChats/>
             }
             {
                 activeBarContent === "profile" &&

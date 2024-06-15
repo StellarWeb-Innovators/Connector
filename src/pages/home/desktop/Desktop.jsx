@@ -4,7 +4,7 @@ import Sidebar from "../common/sidebar/Sidebar";
 
 const Desktop = () => {
     return (
-        <div className="w-full h-screen flex">
+        <div className="w-full h-screen flex fixed top-0">
             {/* sidebar */}
             <div>
                 <Sidebar />
