@@ -88,7 +88,7 @@ const Login = () => {
                                 <button className='hover: bg-[#0D6EFD] w-full py-4 text-white font-bold rounded-lg'>
                                     {
                                         loginLoading ?
-                                            <span className="loading loading-spinner loading-sm text-white"></span>
+                                            <span className="loading loading-spinner loading-sm text-white">loading</span>
                                             :
 
                                             "Login"

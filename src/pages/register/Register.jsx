@@ -128,7 +128,7 @@ const Register = () => {
 
                                     {
                                         registerLoading ?
-                                            <span className="loading loading-spinner loading-sm text-white"></span>
+                                            <span className="loading loading-spinner loading-sm text-white">loading</span>
                                             :
 
                                             "Register"
