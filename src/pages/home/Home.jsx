@@ -1,9 +1,10 @@
+import Desktop from "./desktop/Desktop";
 
 
 const Home = () => {
     return (
         <div>
-            This is home
+            <Desktop/>
         </div>
     );
 };
