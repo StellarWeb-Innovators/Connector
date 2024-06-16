@@ -1,6 +1,7 @@
 import { RiUser3Line } from "react-icons/ri";
 import CommonHeader from "./CommonHeader";
 import { Link, useParams } from "react-router-dom";
+import ActiveContact from "./ActiveContact";
 
 const MyChats = () => {
     const chatId = useParams()?.chatId;
@@ -40,6 +41,7 @@ const MyChats = () => {
             name: "abc",
         },
     ]
+    const activeContacts = [1, 2, 3, 4, 5, 6,7,8,9]
     return (
         <div>
             <CommonHeader
@@ -48,8 +50,13 @@ const MyChats = () => {
                 placeholder={"Search messages or users"}
             />
             {/* active */}
-            <div className="bg-red-500 h-[68px] w-full p-6">
-                active members
+            <div className="mt-4 w-full p-6 flex gap-4 overflow-x-scroll no-scrollbar overflow-hidden">
+                {
+                    activeContacts?.map(contact => <ActiveContact
+                        key={contact}
+                        contact={contact}
+                    ></ActiveContact>)
+                }
             </div>
 
             {/* my chats */}
