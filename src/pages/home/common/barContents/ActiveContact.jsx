@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import image from "../../../../assets/IMG_20230714_001437.png";
 
-const ActiveContact = ({ contact }) => {
+const ActiveContact = () => {
     return (
         <div className="bg-[#E6EBF5] px-[37px] py-[27px] rounded relative">
             <div className="absolute -top-4 left-4 flex flex-col items-center justify-center">

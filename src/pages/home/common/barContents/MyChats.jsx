@@ -61,7 +61,7 @@ const MyChats = () => {
 
             {/* my chats */}
             <h3 className="px-6 mb-4 font-semibold text-lg">Recent</h3>
-            <div className="px-[10px] flex flex-col gap-y-[2px] max-h-[70vh] overflow-y-auto no-scrollbar pt-1 pb-8">
+            <div className="px-[10px] flex flex-col gap-y-[2px] max-h-[70vh] overflow-y-auto no-scrollbar pt-1 pb-24">
                 {
                     myChats?.map((chat, index) => <Link
                         to={`/chat/${chat?._id}`}
