@@ -7,7 +7,7 @@ const ChatBox = () => {
     return (
         <div className="w-full h-screen ">
             <InboxHeader />
-            <div className="h-[70vh]">
+            <div className="max-h-[70vh]">
                 <Messages />
             </div>
         </div>
