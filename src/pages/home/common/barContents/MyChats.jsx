@@ -6,6 +6,7 @@ import ActiveContact from "./ActiveContact";
 const MyChats = () => {
     const chatId = useParams()?.chatId;
     const id = parseInt(chatId);
+    const activeColor = "#7269EF";
 
     const myChats = [
         {
@@ -61,13 +62,13 @@ const MyChats = () => {
 
             {/* my chats */}
             <h3 className="px-6 mb-4 font-semibold text-lg">Recent</h3>
-            <div className="px-[10px] flex flex-col gap-y-[2px] max-h-[70vh] overflow-y-auto no-scrollbar pt-1 pb-24">
+            <div className=" flex flex-col gap-y-[2px] max-h-[70vh] overflow-y-auto no-scrollbar pt-1 pb-24">
                 {
                     myChats?.map((chat, index) => <Link
                         to={`/chat/${chat?._id}`}
                         key={index}>
                         <div
-                            className={`${chat?._id === id && "bg-[#E6EBF5]"} transition-colors duration-200 px-5 py-4 rounded-sm cursor-pointer`}
+                            className={`${chat?._id === id ? `bg-[#7269ef1a]  border-[${activeColor}]` : "border-[#F5F7FB]"} border-l-4 transition-all duration-200 px-5 py-4 cursor-pointer`}
                         >
                             <div className="flex gap-2 items-center">
                                 {/* image */}
@@ -77,7 +78,7 @@ const MyChats = () => {
                                 {/* name and last message */}
                                 <div>
                                     <h4>Patrick Hendricks</h4>
-                                    <p>Hey! I am available</p>
+                                    <p className={`${chat?._id === id && "text-[#7269EF]"}`}>Hey! I am available</p>
                                 </div>
                             </div>
                         </div>
