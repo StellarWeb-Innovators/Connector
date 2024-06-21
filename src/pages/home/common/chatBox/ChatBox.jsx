@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useParams } from "react-router-dom";
 import InboxHeader from "./InboxHeader";
 import Messages from "./Messages";
