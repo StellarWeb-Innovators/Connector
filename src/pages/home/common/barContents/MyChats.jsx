@@ -6,7 +6,7 @@ import ActiveContact from "./ActiveContact";
 const MyChats = () => {
     const chatId = useParams()?.chatId;
     const id = parseInt(chatId);
-    const activeColor = "#7269EF";
+    // const activeColor = "#7269EF";
 
     const myChats = [
         {
@@ -68,7 +68,7 @@ const MyChats = () => {
                         to={`/chat/${chat?._id}`}
                         key={index}>
                         <div
-                            className={`${chat?._id === id ? `bg-[#7269ef1a]  border-[${activeColor}]` : "border-[#F5F7FB]"} border-l-4 transition-all duration-200 px-5 py-4 cursor-pointer`}
+                            className={`${chat?._id === id ? `bg-[#7269ef1a]  border-[#7269EF]` : "border-[#F5F7FB]"} hover:bg-[#7269ef1a] border-l-4 transition-all duration-200 px-5 py-4 cursor-pointer`}
                         >
                             <div className="flex gap-2 items-center">
                                 {/* image */}

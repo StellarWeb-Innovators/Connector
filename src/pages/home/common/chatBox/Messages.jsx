@@ -46,7 +46,7 @@ const Messages = () => {
     ]
     return (
         <div className="flex flex-col justify-end gap-y-4  py-1">
-            <div className="h-[70vh] space-y-4 overflow-hidden overflow-y-auto no-scrollbar px-6 pt-6">
+            <div className="h-[75vh]  space-y-4 overflow-hidden overflow-y-auto no-scrollbar px-6 pt-6">
                 {
                     allMessages?.map((message, index) => <Message
                         key={index}

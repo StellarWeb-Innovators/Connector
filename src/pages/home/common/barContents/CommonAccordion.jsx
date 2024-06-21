@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import { RiUser2Line } from "react-icons/ri";
