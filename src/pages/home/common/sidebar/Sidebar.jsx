@@ -29,7 +29,7 @@ const Sidebar = () => {
         },
     ]
     return (
-        <div className="w-[75px] text-gray-600 h-screen flex flex-col justify-between items-center shadow-sm py-5 border-r">
+        <div className="w-[75px] shadow text-gray-600 h-screen flex flex-col justify-between items-center py-5 border-r">
             {/* logo */}
             <p>logo</p>
             {/* sidebar links */}

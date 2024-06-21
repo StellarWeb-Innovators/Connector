@@ -1,10 +1,12 @@
 import { RiUser3Line } from "react-icons/ri";
 import CommonHeader from "./CommonHeader";
 import { Link, useParams } from "react-router-dom";
+import ActiveContact from "./ActiveContact";
 
 const MyChats = () => {
     const chatId = useParams()?.chatId;
     const id = parseInt(chatId);
+    // const activeColor = "#7269EF";
 
     const myChats = [
         {
@@ -40,6 +42,7 @@ const MyChats = () => {
             name: "abc",
         },
     ]
+    const activeContacts = [1, 2, 3, 4, 5, 6,7,8,9]
     return (
         <div>
             <CommonHeader
@@ -48,19 +51,24 @@ const MyChats = () => {
                 placeholder={"Search messages or users"}
             />
             {/* active */}
-            <div className="bg-red-500 h-[68px] w-full p-6">
-                active members
+            <div className="mt-4 w-full p-6 flex gap-4 overflow-x-scroll no-scrollbar overflow-hidden">
+                {
+                    activeContacts?.map(contact => <ActiveContact
+                        key={contact}
+                        contact={contact}
+                    ></ActiveContact>)
+                }
             </div>
 
             {/* my chats */}
-            <h3 className="px-6 mb-4 font-semibold text-lg">Recent</h3>
-            <div className="px-[10px] flex flex-col gap-y-[2px] max-h-[70vh] overflow-y-auto no-scrollbar pt-1 pb-8">
+            <h3 className="px-6 mt-2 mb-4 font-semibold text-lg">Recent</h3>
+            <div className=" flex flex-col gap-y-[2px] max-h-[70vh] overflow-y-auto no-scrollbar pt-1 pb-24">
                 {
                     myChats?.map((chat, index) => <Link
                         to={`/chat/${chat?._id}`}
                         key={index}>
                         <div
-                            className={`${chat?._id === id && "bg-[#E6EBF5]"} transition-colors duration-200 px-5 py-4 rounded-sm cursor-pointer`}
+                            className={`${chat?._id === id ? `bg-[#7269ef1a]  border-[#7269EF]` : "border-[#F5F7FB]"} hover:bg-[#7269ef1a] border-l-4 transition-all duration-200 px-5 py-4 cursor-pointer`}
                         >
                             <div className="flex gap-2 items-center">
                                 {/* image */}
@@ -70,7 +78,7 @@ const MyChats = () => {
                                 {/* name and last message */}
                                 <div>
                                     <h4>Patrick Hendricks</h4>
-                                    <p>Hey! I am available</p>
+                                    <p className={`${chat?._id === id && "text-[#7269EF]"}`}>Hey! I am available</p>
                                 </div>
                             </div>
                         </div>
