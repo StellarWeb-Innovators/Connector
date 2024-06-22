@@ -51,7 +51,7 @@ const MyChats = () => {
                 placeholder={"Search messages or users"}
             />
             {/* active */}
-            <div className="mt-4 w-full lg:p-6 p-3 flex lg:gap-4 gap-3 overflow-x-scroll no-scrollbar overflow-hidden">
+            <div className="mt-4 w-full lg:px-6 lg:py-5 p-3 flex lg:gap-4 gap-3 overflow-x-scroll no-scrollbar overflow-hidden">
                 {
                     activeContacts?.map(contact => <ActiveContact
                         key={contact}
@@ -61,14 +61,14 @@ const MyChats = () => {
             </div>
 
             {/* my chats */}
-            <h3 className="px-6 lg:mt-2 mb-4 font-semibold text-lg hidden lg:block">Recent</h3>
+            <h3 className="px-6  mb-4 lg:mb-0 font-semibold text-lg hidden lg:block">Recent</h3>
             <div className=" flex flex-col gap-y-[2px] lg:max-h-[70vh] overflow-y-auto no-scrollbar pt-1 lg:pb-24 pb-5">
                 {
                     myChats?.map((chat, index) => <Link
                         to={`/chat/${chat?._id}`}
                         key={index}>
                         <div
-                            className={`${chat?._id === id ? `bg-[#7269ef1a]  border-[#7269EF]` : "border-[#F5F7FB]"} hover:bg-[#7269ef1a] border-l-4 transition-all duration-200 lg:px-5 px-3 lg:py-4 py-3 cursor-pointer`}
+                            className={`${chat?._id === id ? `bg-[#7269ef1a]  border-[#7269EF]` : "border-[#F5F7FB]"} hover:bg-[#7269ef1a] border-l-4 transition-all duration-200 lg:px-5 px-3 lg:py-[14px] py-3 cursor-pointer`}
                         >
                             <div className="flex gap-2 items-center">
                                 {/* image */}
