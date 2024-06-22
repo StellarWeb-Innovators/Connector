@@ -9,7 +9,7 @@ const BarContents = () => {
     const {activeBarContent} = useContext(ConversationContext);
 
     return (
-        <div className="lg:w-[380px] lg:h-screen overflow-scroll hide-scrollbar lg:bg-[#F5F7FB]">
+        <div className="lg:w-[380px] lg:h-screen overflow-scroll hide-scrollbar lg:bg-[#F5F7FB] dark:bg-dark-background">
             {
                 activeBarContent === "chats" &&
                 <MyChats/>

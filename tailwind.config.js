@@ -4,11 +4,27 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Custom colors for light mode
+        light: {
+          background: '#ffffff',
+          text: '#000000',
+          primary: '#1a202c',
+        },
+        // Custom colors for dark mode
+        dark: {
+          background: '#1a202c',
+          text: '#ffffff',
+          primary: '#f6e05e',
+        },
+      },
+    },
   },
   plugins: [
-    function({ addUtilities }) {
+    function ({ addUtilities }) {
       const newUtilities = {
         '.hide-scrollbar': {
           '&::-webkit-scrollbar': {

@@ -1,11 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ConversationContext } from "../../../../provider/ConversationProvider";
 import { RiUser2Line, RiMessage3Line, RiGroupLine, RiContactsLine, RiSettings2Line, RiMoonClearLine, RiSunLine, RiUser3Line } from "react-icons/ri";
 
 
 const Sidebar = () => {
-    const { activeBarContent, setActiveBarContent } = useContext(ConversationContext);
-    const [theme, setTheme] = useState("light");
+    const { activeBarContent, setActiveBarContent, darkMode, setDarkMode } = useContext(ConversationContext);
     const links = [
         {
             section: "chats",
@@ -48,12 +47,12 @@ const Sidebar = () => {
             {/* dark mode and profile btn */}
             <ul className="lg:flex flex-col items-center gap-3 hidden">
                 {
-                    theme === "light" ?
-                        <button onClick={() => setTheme("dark")}>
+                    darkMode ?
+                        <button onClick={() => setDarkMode(!darkMode)}>
                             <RiMoonClearLine className="text-2xl" />
                         </button>
                         :
-                        <button onClick={() => setTheme("light")}>
+                        <button onClick={() => setDarkMode(!darkMode)}>
                             <RiSunLine className="text-2xl" />
                         </button>
                 }
