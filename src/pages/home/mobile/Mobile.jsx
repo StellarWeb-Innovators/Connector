@@ -9,10 +9,10 @@ const Mobile = () => {
             {
                 !isChatRoute ?
                     <>
-                        <div className="max-h-[88vh] overflow-y-scroll">
+                        <div className="max-h-[88vh] overflow-y-scroll md:px-6">
                             <BarContents />
                         </div>
-                        <div className="absolute w-full bottom-0 left-0 z-20 border-t">
+                        <div className="absolute w-full bottom-0 left-0 z-20 border-t md:px-6">
                             <Sidebar />
                         </div>
                     </>
