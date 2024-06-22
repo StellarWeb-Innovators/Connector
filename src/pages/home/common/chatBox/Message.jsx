@@ -6,21 +6,21 @@ import { RiMore2Fill, RiTimeLine } from "react-icons/ri";
 
 const Message = ({ message }) => {
     const { user } = useAuth();
-    console.log(user?.email);
+    // console.log(user?.email);
     return (
         <div className="">
             {
                 message?.sender === user?.email ?
                     <div className="flex justify-end w-full">
-                        <div className="w-3/5 flex justify-end">
+                        <div className="lg:w-3/5 w-5/6 flex justify-end">
                             <div className="flex gap-2">
                                 {/* icon for delete and other stuffs */}
                                 <button className="w-fit h-fit mt-1">
-                                    <RiMore2Fill className=" text-gray-500" />
+                                    <RiMore2Fill className=" text-gray-500 text-sm lg:text-base" />
                                 </button>
-                                <div className="relative p-4 rounded-md flex justify-end bg-[#F5F7FB]">
+                                <div className="relative lg:p-4 p-3 rounded-md flex justify-end bg-[#F5F7FB]">
                                     <div className="">
-                                        <p>{message?.message}</p>
+                                        <p className="text-sm lg:text-base">{message?.message}</p>
                                         <div className="text-gray-500 flex items-center justify-end gap-1">
                                             <RiTimeLine className="text-xs" />
                                             <span className="text-xs font-semibold">10:05</span>
@@ -34,13 +34,13 @@ const Message = ({ message }) => {
                     :
                     <div className="flex gap-2 items-end">
                         {/* image */}
-                        <img src={image} className="w-9 h-9 rounded-full object-cover" alt="" />
-                        <div className="w-3/5">
+                        <img src={image} className="lg:w-9 lg:h-9 h-8 w-8 rounded-full object-cover" alt="" />
+                        <div className="lg:w-3/5 w-5/6">
                             {/* message */}
                             <div className="flex gap-2 ">
                                 <div className="relative">
-                                    <div className="bg-[#7269EF] text-white p-4 rounded-md">
-                                        <p>{message?.message}</p>
+                                    <div className="bg-[#7269EF] text-white lg:p-4 p-3 rounded-md">
+                                        <p className="text-sm lg:text-base">{message?.message}</p>
                                         <div className="text-[#FFFFFF80] flex items-center justify-end gap-1">
                                             <RiTimeLine className="text-xs" />
                                             <span className="text-xs font-semibold">10:05</span>
@@ -50,11 +50,11 @@ const Message = ({ message }) => {
                                 </div>
                                 {/* icon for delete and other stuffs */}
                                 <button className="w-fit h-fit mt-1">
-                                    <RiMore2Fill className=" text-gray-500" />
+                                    <RiMore2Fill className=" text-gray-500 text-sm lg:text-base" />
                                 </button>
                             </div>
                             {/* name */}
-                            <p className="mt-2 text-sm text-gray-700 font-medium">Doris khan</p>
+                            <p className="mt-2 lg:text-sm text-xs text-gray-700 font-medium">Doris khan</p>
                         </div>
                     </div>
             }
