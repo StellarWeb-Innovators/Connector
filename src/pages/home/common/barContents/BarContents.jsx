@@ -1,20 +1,22 @@
 import { useContext } from "react";
 import { ConversationContext } from "../../../../provider/ConversationProvider";
 import MyChats from "./MyChats";
+import Profile from "./Profile";
+import Contact from "./Contact";
 
 
 const BarContents = () => {
     const {activeBarContent} = useContext(ConversationContext);
 
     return (
-        <div className="w-[380px] h-screen bg-[#F5F7FB]">
+        <div className="lg:w-[380px] lg:h-screen overflow-scroll hide-scrollbar lg:bg-[#F5F7FB]">
             {
                 activeBarContent === "chats" &&
                 <MyChats/>
             }
             {
                 activeBarContent === "profile" &&
-                <div>profile</div>
+                <Profile/>
             }
             {
                 activeBarContent === "groups" &&
@@ -22,7 +24,7 @@ const BarContents = () => {
             }
             {
                 activeBarContent === "contacts" &&
-                <div>contacts</div>
+                <Contact/>
             }
             {
                 activeBarContent === "setting" &&

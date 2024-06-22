@@ -12,7 +12,7 @@ const ConversationProvider = ({ children }) => {
 
     const conversationInfo = {
         activeBarContent,
-        setActiveBarContent
+        setActiveBarContent,
     }
 
     return <ConversationContext.Provider value={conversationInfo}>

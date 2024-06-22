@@ -9,7 +9,7 @@ const Sidebar = () => {
     const links = [
         {
             section: "chats",
-            icon: <RiMessage3Line className="text-2xl" />
+            icon: <RiMessage3Line className="lg:text-2xl text-xl" />
         },
         {
             section: "profile",
@@ -29,16 +29,16 @@ const Sidebar = () => {
         },
     ]
     return (
-        <div className="w-[75px] text-gray-600 h-screen flex flex-col justify-between items-center shadow-sm py-5 border-r">
+        <div className="lg:w-[75px] shadow text-gray-600 lg:h-screen lg:flex lg:flex-col justify-between items-center lg:py-5 py-2 lg:border-r px-3 lg:px-0">
             {/* logo */}
-            <p>logo</p>
+            <p className="hidden lg:block">logo</p>
             {/* sidebar links */}
-            <ul className="flex flex-col gap-y-[14px]">
+            <ul className="flex lg:flex-col justify-between lg:justify-normal lg:gap-y-[14px]">
                 {
                     links?.map((link, index) => <li
                         key={index}
                         onClick={() => setActiveBarContent(link?.section)}
-                        className={`cursor-pointer rounded-lg p-4 transition-colors duration-300 hover:bg-[#7269ef1a] hover:text-[#7269EF] ${activeBarContent === link?.section &&
+                        className={`cursor-pointer rounded-lg lg:p-4 p-3 transition-colors duration-300 hover:bg-[#7269ef1a] hover:text-[#7269EF] ${activeBarContent === link?.section &&
                             "bg-[#7269ef1a] text-[#7269EF]"}`}
                     >
                         {link?.icon}
@@ -46,7 +46,7 @@ const Sidebar = () => {
                 }
             </ul>
             {/* dark mode and profile btn */}
-            <ul className="flex flex-col items-center gap-3">
+            <ul className="lg:flex flex-col items-center gap-3 hidden">
                 {
                     theme === "light" ?
                         <button onClick={() => setTheme("dark")}>
